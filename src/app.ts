@@ -1,3 +1,4 @@
+import { MenuCommand } from './commands/menu.command';
 import { InfoCommand } from './commands/info.command';
 import { StartCommand } from './commands/start.command';
 import { IBotContext } from './context/context.interface';
@@ -22,7 +23,8 @@ class Bot {
     init() {
         this.commands = [
             new StartCommand(this.bot),
-            new InfoCommand(this.bot)
+            new InfoCommand(this.bot),
+            new MenuCommand(this.bot)
         ]
         for (const command of this.commands) {
             command.handle()

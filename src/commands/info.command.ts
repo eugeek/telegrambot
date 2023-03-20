@@ -1,6 +1,7 @@
 import { IBotContext } from '../context/context.interface';
-import {  Telegraf } from 'telegraf';
+import { Telegraf } from 'telegraf';
 import { Command } from "./command.class";
+import { infoHandler } from '../lib/util';
 
 export class InfoCommand extends Command {
     constructor(bot: Telegraf<IBotContext>) {
@@ -8,9 +9,6 @@ export class InfoCommand extends Command {
     }
 
     handle(): void {
-        this.bot.hears('/info',(ctx) => {
-            const name = ctx.update.message.from.first_name
-            ctx.reply(`${name}, вы изучили ${ctx.session.learned || 0} слов`)
-        })
+        this.bot.hears('/info', infoHandler)
     }
 }
