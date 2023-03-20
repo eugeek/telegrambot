@@ -1,4 +1,4 @@
-import { infoHandler, aboutHandler } from './../lib/util';
+import { infoHandler, aboutHandler, getMyLessonsHandler } from './../lib/util';
 import { IBotContext } from '../context/context.interface';
 import { Telegraf } from 'telegraf';
 import { Command } from "./command.class";
@@ -14,7 +14,7 @@ export class MenuCommand extends Command {
 
         this.bot.action('stats', infoHandler)
         this.bot.action('start_lesson', infoHandler)
-        this.bot.action('my_lessons', infoHandler)
+        this.bot.action('my_lessons', getMyLessonsHandler)
         this.bot.action('about', aboutHandler)
     }
 }

@@ -1,4 +1,4 @@
-import { Markup, session } from 'telegraf';
+import { Markup } from 'telegraf';
 
 export const infoHandler = async (ctx) => {
     const name = ctx.session.name || 'Друг'
@@ -30,3 +30,7 @@ export const aboutHandler = async (ctx) => {
     
     ctx.deleteMessage()
 }
+
+export const getMyLessonsHandler = async (ctx) => {
+    
+} 

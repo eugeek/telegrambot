@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node ./dist/app.js",
-    "dev": "tsc && node ./dist/app.js"
+    "start": "node ./dist/app.js"
   },
-  "author": "",
+  "author": "Eugene Ward",
   "license": "ISC",
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
@@ -21,8 +20,10 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
+    "pg": "^8.10.0",
     "telegraf": "^4.12.2",
     "telegraf-postgres-session": "^1.0.5",
-    "telegraf-session-local": "^2.1.1"
+    "telegraf-session-local": "^2.1.1",
+    "typeorm": "^0.3.12"
   }
 }
